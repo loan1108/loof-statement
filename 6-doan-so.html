@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Let's guess</title>
+  </head>
+
+  <body>
+    <button type="button" onclick="gameOn()">Game on</button>
+
+    <script>
+      function gameOn() {
+        let input = +prompt("Input max value you will guess!");
+
+        let randomNum = Math.floor(Math.random() * input);
+
+        console.log(randomNum);
+
+        let guessNum = +prompt("You guess");
+
+        if (guessNum == randomNum) {
+          alert("Congratulations! Corrected~");
+        } else {
+          for (let i = 0; i < 2; i++) {
+            alert("Choose again");
+
+            let guessAgain = +prompt("Try again");
+
+            if (guessAgain == randomNum) {
+              alert("You right!");
+
+              break;
+            }
+
+            if (i == 1 && guessAgain != randomNum) {
+              alert("So sad~");
+
+              break;
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fibonacci</title>
+  </head>
+
+  <body>
+    <p id="result"></p>
+
+    <script>
+      let number = +prompt("Input any number");
+
+      let n1 = 1,
+        n2 = 1,
+        nextNumber;
+
+      let i = 1;
+
+      let result = document.getElementById("result");
+
+      let fibonacci = "";
+
+      while (i <= number) {
+        fibonacci += `${n1}, `;
+
+        nextNumber = n1 + n2;
+
+        n1 = n2;
+
+        n2 = nextNumber;
+
+        i++;
+      }
+
+      console.log(fibonacci.length);
+
+      fibonacci = fibonacci.substring(0, fibonacci.length - 2);
+
+      result.innerHTML = `Fibonacci Series: ${fibonacci}`;
+    </script>
+  </body>
+</html>

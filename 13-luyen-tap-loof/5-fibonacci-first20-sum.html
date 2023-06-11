@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tổng 20 số đầu tiên trong dãy fibonacci</title>
+  </head>
+
+  <body>
+    <script>
+      let numbers = +prompt("Hãy nhập số chữ số fibonacci mà bạn muốn");
+
+      let num1 = 1,
+        num2 = 1,
+        count = 1,
+        sum = 0,
+        nextNum;
+
+      while (count <= numbers) {
+        sum += num1;
+
+        nextNum = num1 + num2;
+
+        num1 = num2;
+
+        num2 = nextNum;
+
+        count++;
+      }
+
+      document.write(
+        "Tổng của " + numbers + " số Fibonacci đầu tiên là " + sum
+      );
+    </script>
+  </body>
+</html>
+

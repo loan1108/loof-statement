@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vừng ơi mở cửa</title>
+  </head>
+  <body>
+    <script>
+      let passWord = "Vừng ơi mở cửa ra";
+      let input = null;
+      let count = 1;
+      do{
+        input= prompt("Nhập câu thần chú");
+        if(input=== passWord) {
+            alert("Ta da~ Khám phá kho báu thôi");
+            break;
+        }
+        if(count === 3){
+            alert("Bạn sẽ không bao giờ tìm được kho báu đâu")
+        }
+        count++;
+      }while(count <= 3)
+    </script>
+  </body>
+</html>

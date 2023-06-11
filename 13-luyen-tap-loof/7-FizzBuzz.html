@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FizzBuzz</title>
+  </head>
+
+  <body>
+    <script>
+      let numbers = +prompt("Hãy nhập số mà bạn muốn");
+
+      let count = 1;
+
+      let num = 1;
+
+      let str = "";
+
+      while (count <= numbers) {
+        if (num % 3 == 0 && num % 5 != 0) {
+          str += "Fizz" + "<br>";
+        } else if (num % 5 == 0 && num % 3 != 0) {
+          str += "Buzz" + "<br>";
+        } else if (num % 3 == 0 && num % 5 == 0) {
+          str += "FizzBuzz" + "<br>";
+        } else {
+          str += num + "<br>";
+        }
+
+        num++;
+
+        count++;
+      }
+
+      document.write(str);
+    </script>
+  </body>
+</html>

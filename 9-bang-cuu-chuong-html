@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gugudan-Bang cuu chuong</title>
+  </head>
+
+  <body>
+    <script>
+      let table = `<table border = "1" width="1000px">`;
+
+      //Make a row
+
+      for (let i = 1; i <= 9; i++) {
+        table += "<tr>";
+
+        //Make a cell
+
+        for (let j = 2; j <= 9; j++) {
+          let result = i * j;
+
+          table += `<td> ${j} X ${i} = ${result}</td>`;
+        }
+
+        table += "</tr>";
+      }
+
+      table += "</table>";
+
+      console.log(typeof table);
+
+      document.write(table);
+    </script>
+  </body>
+</html>

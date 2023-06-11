@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vẽ tam giác</title>
+  </head>
+  <body>
+    <div style="margin-left: 500px; font-size: 30px; width: 200px">
+      <p id="tam-giac-1" style="margin-bottom: 60px"></p>
+      <p id="tam-giac-2"></p>
+      <p id="tam-giac-3" style="text-align: right; margin-bottom: 60px"></p>
+      <p id="tam-giac-4" style="text-align: right; "></p>
+    </div>
+
+    <script>
+      let star = "";
+      let count = 1;
+      //Tam giác 1
+      for (let i = 1; i <= 5; i++) {
+        star += "<p>";
+        for (let j = 1; j <= i; j++) {
+          star += "*";
+        }
+        star += "</p>";
+      }
+
+      document.getElementById("tam-giac-1").innerHTML = star;
+      //Tam giác 2
+      star = "";
+      for (let i = 5; i >= 1; i--) {
+        star += "<p>";
+        for (let j = 1; j <= i; j++) {
+          star += "*";
+        }
+        star += "</p>";
+      }
+      document.getElementById("tam-giac-2").innerHTML = star;
+
+      //Tam giác 3
+      star = "";
+
+      for (let i = 1; i <= 5; i++) {
+        star += "<p>";
+        for (let j = 1; j <= i; j++) {
+          star += "*";
+        }
+        star += "</p>";
+      }
+
+      document.getElementById("tam-giac-3").innerHTML = star;
+      //Tam giac 4
+      star = "";
+      for (let i = 5; i >= 1; i--) {
+        star += "<p>";
+        for (let j = 1; j <= i; j++) {
+          star += "*";
+        }
+        star += "</p>";
+      }
+      document.getElementById("tam-giac-4").innerHTML = star;
+    </script>
+  </body>
+</html>

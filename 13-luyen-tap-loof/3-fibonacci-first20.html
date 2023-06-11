@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hiển thị 20 số đầu tiên của dãy fibonacci</title>
+  </head>
+
+  <body>
+    <script>
+      let numbers = prompt("Hãy nhập số lượng số fibonacci mà bạn muốn");
+
+      let num1 = 1,
+        num2 = 1,
+        nextNum;
+
+      let count = 1;
+
+      for (; count <= numbers; count++) {
+        document.write(num1 + "<br>");
+
+        nextNum = num1 + num2;
+
+        num1 = num2;
+
+        num2 = nextNum;
+      }
+    </script>
+  </body>
+</html>
